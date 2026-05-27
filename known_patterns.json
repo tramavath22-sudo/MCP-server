@@ -1,0 +1,42 @@
+[
+  {
+    "pattern": "DISK_IO_ERROR",
+    "severity": "Critical",
+    "category": "Storage",
+    "prediction_rule": "Repeated disk I/O errors indicate possible disk or controller failure.",
+    "root_cause": "Possible disk failure, bad sectors, or storage controller issue.",
+    "suggested_action": "Check SMART status, run disk diagnostics, verify controller logs, and replace disk if required."
+  },
+  {
+    "pattern": "MEMORY_ECC_FAILURE",
+    "severity": "High",
+    "category": "Memory",
+    "prediction_rule": "ECC correction threshold exceeded on memory module.",
+    "root_cause": "Faulty RAM module or memory slot instability.",
+    "suggested_action": "Run memory diagnostics, reseat DIMM, and replace affected RAM module."
+  },
+  {
+    "pattern": "CPU_THERMAL_WARNING",
+    "severity": "Medium",
+    "category": "Thermal",
+    "prediction_rule": "CPU temperature is above warning threshold.",
+    "root_cause": "Cooling issue, blocked airflow, fan failure, or degraded thermal paste.",
+    "suggested_action": "Check fans, airflow, heat sink, and thermal paste."
+  },
+  {
+    "pattern": "NETWORK_LINK_DOWN",
+    "severity": "Medium",
+    "category": "Network",
+    "prediction_rule": "Network interface link is unavailable.",
+    "root_cause": "Cable issue, switch port failure, NIC driver problem, or interface disabled.",
+    "suggested_action": "Check cable, switch port, NIC status, and network driver."
+  },
+  {
+    "pattern": "TEST_TIMEOUT",
+    "severity": "Low",
+    "category": "Test Execution",
+    "prediction_rule": "Test case did not complete within expected SLA.",
+    "root_cause": "Slow hardware response, blocked process, test dependency failure, or resource contention.",
+    "suggested_action": "Re-run test, check CPU/memory utilization, and validate dependent services."
+  }
+]
